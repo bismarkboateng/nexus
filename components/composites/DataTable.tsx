@@ -64,7 +64,10 @@ export function DataTable<TData, TValue>({
           />
         </div>
 
-        <Button><Plus />Add Lead</Button>
+        <Button className="bg-blue-color text-white hover:bg-blue-color
+        active:bg-blue-color">
+         <Plus className="" />Add Lead
+        </Button>
       </section>
 
       <div className="rounded-md border">

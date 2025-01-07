@@ -1,6 +1,6 @@
 import React from "react";
-import Sidebar from "@/components/composite/Sidebar";
-import Header from "@/components/composite/HeaderActions";
+import Sidebar from "@/components/composites/Sidebar";
+import Header from "@/components/composites/HeaderActions";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (

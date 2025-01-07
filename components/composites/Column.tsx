@@ -1,7 +1,7 @@
 "use client";
 
 import { ColumnDef } from "@tanstack/react-table";
-import { Lead } from "@/app/(root)/dashboard/types";
+import { Lead } from "@/app/(lead-feat)/types";
 import { Checkbox } from "@/components/ui/checkbox";
 
 export const columns: ColumnDef<Lead>[] = [
