@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/breadcrumb";
 import { Bell } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import Text from "../ui/Text";
+import Text from "../ui/text";
 
 function Header() {
   const pathname = usePathname();

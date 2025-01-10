@@ -9,7 +9,6 @@ import {
   getFilteredRowModel,
   ColumnFiltersState,
 } from "@tanstack/react-table";
-
 import {
   Table,
   TableBody,
@@ -20,8 +19,11 @@ import {
 } from "@/components/ui/table";
 import { Button } from "../ui/button";
 import { Input } from "@/components/ui/input";
+
 import { useState } from "react";
 import { Plus } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import LeadDetail from "@/app/(lead-feat)/components/lead-details/lead-details";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -64,13 +66,16 @@ export function DataTable<TData, TValue>({
           />
         </div>
 
-        <Button className="bg-blue-color text-white hover:bg-blue-color
-        active:bg-blue-color">
-         <Plus className="" />Add Lead
+        <Button
+          className="bg-blue-color text-white hover:bg-blue-color
+        active:bg-blue-color"
+        >
+          <Plus className="" />
+          Add Lead
         </Button>
       </section>
 
-      <div className="rounded-md border">
+      <div className="rounded-md border cursor-pointer">
         <Table>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
@@ -93,19 +98,29 @@ export function DataTable<TData, TValue>({
           <TableBody>
             {table.getRowModel().rows?.length ? (
               table.getRowModel().rows.map((row) => (
-                <TableRow
-                  key={row.id}
-                  data-state={row.getIsSelected() && "selected"}
-                >
-                  {row.getVisibleCells().map((cell) => (
-                    <TableCell key={cell.id}>
-                      {flexRender(
-                        cell.column.columnDef.cell,
-                        cell.getContext()
-                      )}
-                    </TableCell>
-                  ))}
-                </TableRow>
+                <Sheet key={row.id}>
+                  <SheetTrigger className="w-full">
+                    <TableRow
+                      key={row.id}
+                      data-state={row.getIsSelected() && "selected"}
+                      className=""
+                    >
+                      {row.getVisibleCells().map((cell) => (
+                        <TableCell
+                          key={cell.id}
+                        >
+                          {flexRender(
+                            cell.column.columnDef.cell,
+                            cell.getContext()
+                          )}
+                        </TableCell>
+                      ))}
+                    </TableRow>
+                  </SheetTrigger>
+                  <SheetContent side="bottom">
+                    <LeadDetail />
+                  </SheetContent>
+                </Sheet>
               ))
             ) : (
               <TableRow>

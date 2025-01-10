@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { sidebarLinks } from "@/app/(lead-feat)/data";
-import Text from "../ui/Text";
+import Text from "../ui/text";
 
 
 
