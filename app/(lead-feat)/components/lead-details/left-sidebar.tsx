@@ -30,7 +30,7 @@ export default function LeftSidebar() {
           className="bg-blue-color text-white w-[80%] hover:bg-blue-500
        active:bg-blue-color"
         >
-          Convert to Contact
+          Convert to contact
         </Button>
       </div>
       <Text variant="p" className="text-center mt-2 text-xs text-gray-500">

@@ -71,7 +71,7 @@ export function DataTable<TData, TValue>({
         active:bg-blue-color"
         >
           <Plus className="" />
-          Add Lead
+          Add lead
         </Button>
       </section>
 
