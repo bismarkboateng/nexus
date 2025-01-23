@@ -14,7 +14,7 @@ export default function LeadContent() {
     <div className="border-r border-gray-200 w-full px-3">
       <Search />
       <Tabs defaultValue="account" className="w-full mt-5">
-        <TabsList className="border bg-gray-200 w-full">
+        <TabsList defaultValue="Activity" className="border bg-gray-200 w-full">
           <TabsTrigger value="Activity">Activity</TabsTrigger>
           <TabsTrigger value="Notes">Notes</TabsTrigger>
           <TabsTrigger value="Emails">Emails</TabsTrigger>

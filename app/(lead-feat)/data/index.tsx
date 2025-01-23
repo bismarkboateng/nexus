@@ -395,3 +395,23 @@ export const leads = [
 ];
 
 export const leadStages = ["New", "Open", "In Progress", "Open deal", "Closed"];
+
+
+export const leadNotes = [
+  {
+    author: "James Howard",
+    date: Date.now(),
+    title: "Called a client again",
+    description: `
+     She's interested in buying one of our rental properties at Adenta, and wants pictures
+     of the place. Please include a detailed breakdown of costs.
+    `,
+    thumbnailUrl: "https://images.pexels.com/photos/29091316/pexels-photo-29091316/free-photo-of-hand-holding-small-model-house-symbolizing-real-estate.jpeg"
+  }
+]
+
+export const activities = [
+  {
+    
+  }
+]
