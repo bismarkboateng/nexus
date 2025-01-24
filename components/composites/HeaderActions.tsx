@@ -61,7 +61,7 @@ function Header() {
         <div className="w-px h-6 bg-gray-400"></div>
 
         <div className="flex items-center gap-2">
-          <Avatar>
+          <Avatar className="w-10 h-10">
             <AvatarImage src="/images/avatar.jpeg" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>

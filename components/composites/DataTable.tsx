@@ -9,6 +9,7 @@ import {
   getFilteredRowModel,
   ColumnFiltersState,
 } from "@tanstack/react-table";
+
 import {
   Table,
   TableBody,
@@ -18,12 +19,11 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Button } from "../ui/button";
-import { Input } from "@/components/ui/input";
-
 import { useState } from "react";
 import { Plus } from "lucide-react";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import LeadDetail from "@/app/(lead-feat)/components/lead-details/lead-details";
+import { Input } from "@/components/ui/input";
+import { Sheet, SheetTrigger } from "@/components/ui/sheet";
+import Addlead from "./AddLead";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -66,61 +66,48 @@ export function DataTable<TData, TValue>({
           />
         </div>
 
-        <Button
-          className="bg-blue-color text-white hover:bg-blue-color
-        active:bg-blue-color"
-        >
-          <Plus className="" />
-          Add Lead
-        </Button>
+        <Sheet>
+          <SheetTrigger asChild>
+            <Button><Plus className="mr-2 h-4 w-4" />Add Lead</Button>
+          </SheetTrigger>
+            <Addlead />
+        </Sheet>
       </section>
 
-      <div className="rounded-md border cursor-pointer">
+      <div className="rounded-md border">
         <Table>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow key={headerGroup.id}>
-                {headerGroup.headers.map((header) => {
-                  return (
-                    <TableHead key={header.id}>
-                      {header.isPlaceholder
-                        ? null
-                        : flexRender(
-                            header.column.columnDef.header,
-                            header.getContext()
-                          )}
-                    </TableHead>
-                  );
-                })}
+                {headerGroup.headers.map((header) => (
+                  <TableHead key={header.id}>
+                    {header.isPlaceholder
+                      ? null
+                      : flexRender(
+                          header.column.columnDef.header,
+                          header.getContext()
+                        )}
+                  </TableHead>
+                ))}
               </TableRow>
             ))}
           </TableHeader>
           <TableBody>
             {table.getRowModel().rows?.length ? (
               table.getRowModel().rows.map((row) => (
-                <Sheet key={row.id}>
-                  <SheetTrigger className="w-full">
-                    <TableRow
-                      key={row.id}
-                      data-state={row.getIsSelected() && "selected"}
-                      className=""
-                    >
-                      {row.getVisibleCells().map((cell) => (
-                        <TableCell
-                          key={cell.id}
-                        >
-                          {flexRender(
-                            cell.column.columnDef.cell,
-                            cell.getContext()
-                          )}
-                        </TableCell>
-                      ))}
-                    </TableRow>
-                  </SheetTrigger>
-                  <SheetContent side="bottom">
-                    <LeadDetail />
-                  </SheetContent>
-                </Sheet>
+                <TableRow
+                  key={row.id}
+                  data-state={row.getIsSelected() && "selected"}
+                >
+                  {row.getVisibleCells().map((cell) => (
+                    <TableCell key={cell.id}>
+                      {flexRender(
+                        cell.column.columnDef.cell,
+                        cell.getContext()
+                      )}
+                    </TableCell>
+                  ))}
+                </TableRow>
               ))
             ) : (
               <TableRow>
