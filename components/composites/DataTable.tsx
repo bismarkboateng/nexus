@@ -23,7 +23,7 @@ import { useState } from "react";
 import { Plus } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Sheet, SheetTrigger } from "@/components/ui/sheet";
-import Addlead from "./AddLead";
+import Addlead from "../widgets/AddLead";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];

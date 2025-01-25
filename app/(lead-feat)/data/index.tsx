@@ -548,7 +548,6 @@ export const formData = [
   { label: "Lead ID", title: "leadId", type: "input" },
   { label: "First Name", title: "firstName", type: "input" },
   { label: "Last Name", title: "lastName", type: "input" },
-  { label: "Full Name", title: "fullName", type: "input" },
   { label: "Email Address", title: "emailAddress", type: "input" },
   { label: "Phone Number", title: "phoneNumber", type: "input" },
   { label: "Lead Source", title: "leadSource", type: "input" },
@@ -611,7 +610,7 @@ export const formData = [
   { label: "Updated Date", title: "updatedDate", type: "date" },
   { label: "Lead Owner History", title: "leadOwnerHistory", type: "textarea" },
   { label: "User Actions Logs", title: "userActionsLogs", type: "textarea" },
-];
+]
 
 
 export { formSchema, defaultValues };
