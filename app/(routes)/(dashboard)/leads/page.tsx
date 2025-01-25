@@ -12,11 +12,9 @@ const Leads = async () =>  {
   const data = await getData();
 
   return (
-    <main>
-      <div className="container mx-auto py-10">
+      <main className="container mx-auto py-10">
         <DataTable columns={columns} data={data} />
-      </div>
-    </main>
+      </main>
   );
 };
 

@@ -10,6 +10,8 @@ import {
   User,
   Weight,
 } from "lucide-react";
+import { z } from "zod";
+
 
 const className = "text-gray-300";
 const size = 20;
@@ -394,4 +396,224 @@ export const leads = [
   },
 ];
 
-export const leadStages = ["New", "Open", "In Progress", "Open deal", "Closed"];
+const formSchema = z.object({
+  // Basic Lead Information
+  leadId: z.string().optional(),
+  firstName: z.string().min(2, "First Name is required"),
+  lastName: z.string().min(2, "Last Name is required"),
+  emailAddress: z.string().email("Invalid email address"),
+  leadSource: z.string().optional(),
+  leadStatus: z.string().optional(),
+  leadType: z.string().optional(),
+  leadScore: z.number().optional(),
+
+  // Contact Details
+  address: z.string().optional(),
+  phoneNumber: z.string().optional(),
+  city: z.string().optional(),
+  stateOrProvince: z.string().optional(),
+  country: z.string().optional(),
+  preferredContactMethod: z.string().optional(),
+  preferredContactTime: z.string().optional(),
+
+  // Property Preferences
+  propertyType: z.string().optional(),
+  propertyPriceRange: z.string().optional(),
+  desiredLocations: z.array(z.string()).optional(),
+  sizeRequirements: z.string().optional(),
+  propertyFeatures: z.array(z.string()).optional(),
+  moveInDate: z.string().optional(),
+  investmentPurpose: z.string().optional(),
+
+  // Lead Engagement & Activity Tracking
+  lastContactedDate: z.string().optional(),
+  nextFollowUpDate: z.string().optional(),
+  communicationHistory: z.string().optional(),
+  leadInteraction: z.string().optional(),
+  leadSourceCampaign: z.string().optional(),
+  notes: z.string().optional(),
+
+  // Lead Qualification Information
+  leadQualificationStatus: z.string().optional(),
+  budgetConfirmation: z.boolean().optional(),
+  preApprovedForFinancing: z.boolean().optional(),
+  motivationLevel: z.string().optional(),
+  competitorListingsConsidered: z.string().optional(),
+
+  // Sales Interaction Information
+  assignedAgent: z.string().optional(),
+  assignedProject: z.string().optional(),
+  followUpReminders: z.string().optional(),
+  leadInteractionOutcome: z.string().optional(),
+  dealStage: z.string().optional(),
+
+  // Advanced Lead Data
+  clientSegmentation: z.string().optional(),
+  socialMediaProfiles: z.string().optional(),
+  referralSource: z.string().optional(),
+  leadFunnelStage: z.string().optional(),
+
+  // Marketing and Campaign Tracking
+  campaignParticipation: z.string().optional(),
+  leadEngagementScore: z.number().optional(),
+  landingPagesVisited: z.array(z.string()).optional(),
+  interestCategory: z.string().optional(),
+
+  // Client Conversion & Transaction Information
+  contractStatus: z.string().optional(),
+  dealValue: z.number().optional(),
+  expectedClosingDate: z.string().optional(),
+  paymentStatus: z.string().optional(),
+  clientFeedback: z.string().optional(),
+  postSaleFollowUp: z.string().optional(),
+
+  // Audit and Compliance
+  createdDate: z.string().optional(),
+  updatedDate: z.string().optional(),
+  leadOwnerHistory: z.string().optional(),
+  userActionsLogs: z.string().optional(),
+});
+
+// Default Values
+const defaultValues = {
+  leadId: "",
+  firstName: "",
+  lastName: "",
+  fullName: "",
+  emailAddress: "",
+  phoneNumber: "",
+  leadSource: "",
+  leadStatus: "",
+  leadType: "",
+  leadScore: 0,
+
+  address: "",
+  city: "",
+  stateOrProvince: "",
+  country: "",
+  preferredContactMethod: "",
+  preferredContactTime: "",
+
+  propertyType: "",
+  propertyPriceRange: "",
+  desiredLocations: [],
+  sizeRequirements: "",
+  propertyFeatures: [],
+  moveInDate: "",
+  investmentPurpose: "",
+
+  lastContactedDate: "",
+  nextFollowUpDate: "",
+  communicationHistory: "",
+  leadInteraction: "",
+  leadSourceCampaign: "",
+  notes: "",
+
+  leadQualificationStatus: "",
+  budgetConfirmation: false,
+  preApprovedForFinancing: false,
+  motivationLevel: "",
+  competitorListingsConsidered: "",
+
+  assignedAgent: "",
+  assignedProject: "",
+  followUpReminders: "",
+  leadInteractionOutcome: "",
+  dealStage: "",
+
+  clientSegmentation: "",
+  socialMediaProfiles: "",
+  referralSource: "",
+  leadFunnelStage: "",
+
+  campaignParticipation: "",
+  leadEngagementScore: 0,
+  landingPagesVisited: [],
+  interestCategory: "",
+
+  contractStatus: "",
+  dealValue: 0,
+  expectedClosingDate: "",
+  paymentStatus: "",
+  clientFeedback: "",
+  postSaleFollowUp: "",
+
+  createdDate: "",
+  updatedDate: "",
+  leadOwnerHistory: "",
+  userActionsLogs: "",
+};
+
+export const formData = [
+  { label: "Lead ID", title: "leadId", type: "input" },
+  { label: "First Name", title: "firstName", type: "input" },
+  { label: "Last Name", title: "lastName", type: "input" },
+  { label: "Full Name", title: "fullName", type: "input" },
+  { label: "Email Address", title: "emailAddress", type: "input" },
+  { label: "Phone Number", title: "phoneNumber", type: "input" },
+  { label: "Lead Source", title: "leadSource", type: "input" },
+  { label: "Lead Status", title: "leadStatus", type: "select", options: ["Hot", "Warm", "Cold"] },
+  { label: "Lead Type", title: "leadType", type: "input" },
+  { label: "Lead Score", title: "leadScore", type: "number" },
+
+  { label: "Address", title: "address", type: "input" },
+  { label: "City", title: "city", type: "input" },
+  { label: "State or Province", title: "stateOrProvince", type: "input" },
+  { label: "Country", title: "country", type: "input" },
+  { label: "Preferred Contact Method", title: "preferredContactMethod", type: "input" },
+  { label: "Preferred Contact Time", title: "preferredContactTime", type: "input" },
+
+  { label: "Property Type", title: "propertyType", type: "input" },
+  { label: "Property Price Range", title: "propertyPriceRange", type: "input" },
+  { label: "Desired Locations", title: "desiredLocations", type: "array" },
+  { label: "Size Requirements", title: "sizeRequirements", type: "input" },
+  { label: "Property Features", title: "propertyFeatures", type: "array" },
+  { label: "Move-in Date", title: "moveInDate", type: "date" },
+  { label: "Investment Purpose", title: "investmentPurpose", type: "input" },
+
+  { label: "Last Contacted Date", title: "lastContactedDate", type: "date" },
+  { label: "Next Follow-Up Date", title: "nextFollowUpDate", type: "date" },
+  { label: "Communication History", title: "communicationHistory", type: "textarea" },
+  { label: "Lead Interaction", title: "leadInteraction", type: "textarea" },
+  { label: "Lead Source Campaign", title: "leadSourceCampaign", type: "input" },
+  { label: "Notes", title: "notes", type: "textarea" },
+
+  { label: "Lead Qualification Status", title: "leadQualificationStatus", type: "input" },
+  { label: "Budget Confirmation", title: "budgetConfirmation", type: "checkbox" },
+  { label: "Pre-Approved for Financing", title: "preApprovedForFinancing", type: "checkbox" },
+  { label: "Motivation Level", title: "motivationLevel", type: "input" },
+  { label: "Competitor Listings Considered", title: "competitorListingsConsidered", type: "input" },
+
+  { label: "Assigned Agent", title: "assignedAgent", type: "input" },
+  { label: "Assigned Project", title: "assignedProject", type: "input" },
+  { label: "Follow-Up Reminders", title: "followUpReminders", type: "textarea" },
+  { label: "Lead Interaction Outcome", title: "leadInteractionOutcome", type: "textarea" },
+  { label: "Deal Stage", title: "dealStage", type: "input" },
+
+  { label: "Client Segmentation", title: "clientSegmentation", type: "input" },
+  { label: "Social Media Profiles", title: "socialMediaProfiles", type: "input" },
+  { label: "Referral Source", title: "referralSource", type: "input" },
+  { label: "Lead Funnel Stage", title: "leadFunnelStage", type: "input" },
+
+  { label: "Campaign Participation", title: "campaignParticipation", type: "input" },
+  { label: "Lead Engagement Score", title: "leadEngagementScore", type: "number" },
+  { label: "Landing Pages Visited", title: "landingPagesVisited", type: "array" },
+  { label: "Interest Category", title: "interestCategory", type: "input" },
+
+  { label: "Contract Status", title: "contractStatus", type: "input" },
+  { label: "Deal Value", title: "dealValue", type: "number" },
+  { label: "Expected Closing Date", title: "expectedClosingDate", type: "date" },
+  { label: "Payment Status", title: "paymentStatus", type: "input" },
+  { label: "Client Feedback", title: "clientFeedback", type: "textarea" },
+  { label: "Post-Sale Follow-Up", title: "postSaleFollowUp", type: "textarea" },
+
+  { label: "Created Date", title: "createdDate", type: "date" },
+  { label: "Updated Date", title: "updatedDate", type: "date" },
+  { label: "Lead Owner History", title: "leadOwnerHistory", type: "textarea" },
+  { label: "User Actions Logs", title: "userActionsLogs", type: "textarea" },
+];
+
+
+export { formSchema, defaultValues };
+
+export const leadStages = ["New", "Open", "In Progress", "Open deal", "Closed"]; 
