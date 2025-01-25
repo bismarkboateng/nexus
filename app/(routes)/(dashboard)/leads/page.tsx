@@ -1,5 +1,5 @@
 import React from "react";
-import { DataTable } from "@/components/composites/DataTable";
+import { DataTable } from "@/components/composites/data-table";
 import {  columns } from "@/components/composites/Column";
 import { leadslist } from "@/app/(lead-feat)/data";
 import { Lead } from "@/app/(lead-feat)/types";
