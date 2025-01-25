@@ -79,7 +79,7 @@ const LeadForm = () => {
                 render={({ field }) => (
                   <FormItem className="flex items-center space-x-3">
                     <FormControl>
-                      <Checkbox checked={field.value} onCheckedChange={field.onChange} />
+                      <Checkbox checked={Boolean(field.value)} onCheckedChange={field.onChange} />
                     </FormControl>
                     <FormLabel>{item.label}</FormLabel>
                   </FormItem>
@@ -101,7 +101,7 @@ const LeadForm = () => {
                         onChange={(e) =>
                           field.onChange(e.target.value.split(",").map((val) => val.trim()))
                         }
-                        value={field.value.join(", ")}
+                        value={field.value?.join(", ") ?? ""}
                       />
                     </FormControl>
                   </FormItem>
@@ -118,7 +118,7 @@ const LeadForm = () => {
                   <FormItem className="space-y-3">
                     <FormLabel>{item.label}</FormLabel>
                     <FormControl>
-                      <Select onValueChange={field.onChange} value={field.value}>
+                      <Select value={field.value} onValueChange={field.onChange}>
                         <SelectTrigger className="w-full">
                           <SelectValue placeholder={`Select ${item.label}`} />
                         </SelectTrigger>
