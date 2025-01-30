@@ -7,13 +7,14 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import React from "react";
 
 type FilterProps = {
   options: string[];
+  title: React.ReactNode;
 };
 
-export default function Filter({ options }: FilterProps) {
-  const title = "Filter activity 21/25";
+export default function Filter({ options, title }: FilterProps) {
 
   return (
     <Select>
