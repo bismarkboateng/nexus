@@ -14,7 +14,7 @@ export default function PropertyCard() {
   return (
     <section
       className="col-span-2 flex flex-row gap-2 border rounded-lg p-2
-    cursor-pointer"
+    cursor-pointer shadow"
     >
       <Image
         src="/assets/images/estate.jpeg"
