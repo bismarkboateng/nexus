@@ -5,24 +5,14 @@ import { supabase } from "@/services/supabase-config";
 
 import { LoadingState, SignupData } from "../types";
 import { EMAIL_REDIRECT_URL } from "../utils/const";
+import { validateFields } from "../utils";
 
 
 
 export default function useSignup() {
   const [loading, setLoading] = useState<LoadingState>("idle");
   const router = useRouter();
-
-  const validateInput = useCallback(({ name, email, password }: SignupData): boolean => {
-    if (!name || !email || !password) {
-      toast.error("Please fill in all fields.");
-      return false;
-    }
-    if (password.length < 8) {
-      toast.error("Password must be at least 8 characters long.");
-      return false;
-    }
-    return true;
-  }, []);
+  const validateInput = useCallback(validateFields, []);
 
   const handleSupabaseSignup = useCallback(async ({ email, password }: SignupData) => {
     const { data, error } = await supabase.auth.signUp({
