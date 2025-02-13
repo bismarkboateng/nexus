@@ -13,15 +13,19 @@ import { Checkbox } from "@/components/ui/checkbox";
 import Logo from "@/components/ui/logo";
 import Headline from "@/components/ui/headline";
 import { signUpDefaultValues } from "../../const";
+import useSignup from "../../hooks/useSignup";
+
+import { Loader } from "lucide-react"
 
 export default function SignupForm() {
+  const { handleSignup, loading } = useSignup()
   const form = useForm<z.infer<typeof signUpFormSchema>>({
     resolver: zodResolver(signUpFormSchema),
     defaultValues: signUpDefaultValues,
   });
 
-  function onSubmit(values: z.infer<typeof signUpFormSchema>) {
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof signUpFormSchema>) {
+    await handleSignup(values);
   }
 
   return (
@@ -96,10 +100,18 @@ export default function SignupForm() {
             </label>
           </div>
           <Button
-            className="w-full bg-blue-color hover:bg-blue-color active:bg-blue-color"
+            className="w-full bg-blue-color hover:bg-blue-color active:bg-blue-color
+              disabled:bg-blue-300 disabled:cursor-not-allowed"
             type="submit"
+            disabled={loading === "loading"}
           >
-            Create account
+           {loading === "loading" ? (
+             <>
+              <Loader className="w-4 h-4 animate-spin text-white" />
+             </>
+           ): (
+             <>Create account</>
+           )}
           </Button>
         </form>
       </Form>

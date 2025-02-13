@@ -32,10 +32,18 @@ create table owner (
     contact_preference text,
 )
 
+create table userinfo (
+  id bigint generated always as identity primary key,
+  email text,
+  name text,
+  user_id uuid references "auth"."users"
+);
+
 -- enabling row level security.
 alter table property enable row level security;
 alter table address enable row level security;
 alter table owner enable row level security;
+alter table userinfo enable row level security;
 
 -- creating policies
 create policy "Enable insert on property table for authenticated users"
@@ -54,6 +62,13 @@ with check (
 
 create policy "Enable insert on owner table for authenticated users"
 on "public"."owner"
+to authenticated
+with check (
+  true
+);
+
+create policy "Enable insert on userinfo table for authenticated users"
+on "public"."userinfo"
 to authenticated
 with check (
   true

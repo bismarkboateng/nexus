@@ -9,3 +9,7 @@ address_id, street, city, state, postal_code, country
 Owner table
 -----------
 owner_id, name, phone, email, owner_type, company_name, contact_preference
+
+User table
+----------
+name, email,
