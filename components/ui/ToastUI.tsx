@@ -3,5 +3,5 @@
 import { Toaster } from "sonner";
 
 export default function ToastUI() {
-  return <Toaster />;
+  return <Toaster richColors />;
 }

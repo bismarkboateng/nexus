@@ -16,15 +16,21 @@ import Logo from "@/components/ui/logo";
 import Headline from "@/components/ui/headline";
 
 import { signInDefaultValues } from "../../const";
+import useSignin from "../../hooks/useSignin";
+import { Loader } from "lucide-react";
 
 export default function SignInForm() {
+  const { handleSignin, loading } = useSignin()
+
   const form = useForm<z.infer<typeof signInFormSchema>>({
     resolver: zodResolver(signInFormSchema),
     defaultValues: signInDefaultValues,
   });
 
-  function onSubmit(values: z.infer<typeof signInFormSchema>) {
+  async function onSubmit(values: z.infer<typeof signInFormSchema>) {
     console.log(values);
+    await handleSignin(values.email, values.password)
+
   }
 
   return (
@@ -84,8 +90,15 @@ export default function SignInForm() {
           <Button
             className="w-full bg-blue-color hover:bg-blue-color active:bg-blue-color"
             type="submit"
-          >
-            Log in
+            disabled={loading === "loading"}
+            >
+             {loading === "loading" ? (
+              <>
+               <Loader className="w-4 h-4 animate-spin text-white" />
+              </>
+             ): (
+              <>Create account</>
+             )}
           </Button>
           <Link className="block mt-1" href="/auth/forgot-password">
             <Text className="flex items-center justify-center text-xs cursor-pointer text-blue-color">

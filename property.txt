@@ -1,0 +1,15 @@
+Property table
+--------------
+name, type, address_id, sq_footage, no_of_bedrooms, no_of_bathrooms, owner_id, rental_price, status, lease_start_date, lease_end_date
+
+Address table
+-------------
+address_id, street, city, state, postal_code, country
+
+Owner table
+-----------
+owner_id, name, phone, email, owner_type, company_name, contact_preference
+
+User table
+----------
+name, email,
