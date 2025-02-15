@@ -10,12 +10,30 @@ import { Separator } from "@/components/ui/separator";
 import { BedSingle, Bath, ChartArea, SquareParking } from "lucide-react";
 import PropertyFeature from "./property-feature";
 
+import { Plus } from "lucide-react";
+import Icon from "@/components/ui/icon";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import AddProperty from "./add-property";
+
 export default function PropertyDetail() {
   const properties = useBoundStore((state) => state.property);
   const property = properties[0];
 
   return (
     <section className="col-span-3 mt-5">
+      <div className="flex items-center justify-end mb-3">
+        <Sheet>
+          <SheetTrigger>
+            <Icon className="bg-gradient-to-r from-[#56e1f3] to-[#3301a7] hover:bg-[#3301a7]">
+              <Plus className="text-white" />
+            </Icon>
+          </SheetTrigger>
+          <SheetContent className="sm:max-w-[700px] max-h-[700px]
+          overflow-y-scroll">
+            <AddProperty />
+          </SheetContent>
+        </Sheet>
+      </div>
       <LightHouse />
       <div className="mt-7 flex items-center justify-between">
         <div className="flex flex-col gap-1">
@@ -49,7 +67,7 @@ export default function PropertyDetail() {
       <div className="mt-5">
         <Text className="font-bold">Property details</Text>
         <Text className="mt-1 text-gray-500 text-sm">
-         {property.property_details}
+          {property.property_details}
         </Text>
       </div>
     </section>
