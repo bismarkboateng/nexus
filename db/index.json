@@ -1,0 +1,1117 @@
+[
+    {
+      "images": [
+        {
+          "src": "https://example.com/image36.jpg",
+          "id": "2571"
+        },
+        {
+          "src": "https://example.com/image84.jpg",
+          "id": "8424"
+        },
+        {
+          "src": "https://example.com/image41.jpg",
+          "id": "8617"
+        }
+      ],
+      "title": "Apartment for Rent in Chicago",
+      "address": {
+        "street": "Elm St",
+        "postal_code": "38931",
+        "city": "Houston",
+        "country": "USA"
+      },
+      "no_of_bedrooms": 1,
+      "no_of_bathrooms": 3,
+      "sq_foot": 1457,
+      "parking": "Covered",
+      "price": 3343,
+      "property_type": "Studio",
+      "furnished_status": "Semi-furnished",
+      "year_built": 2006,
+      "availability_status": "Rented",
+      "lease_terms": "Yearly",
+      "owner": {
+        "name": "Owner 13",
+        "contact": "+1-555-8338"
+      },
+      "nearby_amenities": [
+        "Public Transport",
+        "Pool",
+        "Supermarket"
+      ],
+      "utilities_included": [
+        "Water"
+      ],
+      "pet_policy": "Pets Allowed",
+      "security_features": [
+        "Smart Locks",
+        "CCTV"
+      ],
+      "property_details": "A beautiful property located in a prime area with great amenities.",
+      "what_this_place_offers": [
+        "Parking",
+        "Laundry",
+        "Kitchen",
+        "Wi-Fi"
+      ]
+    },
+    {
+      "images": [
+        {
+          "src": "https://example.com/image96.jpg",
+          "id": "3792"
+        },
+        {
+          "src": "https://example.com/image11.jpg",
+          "id": "1884"
+        },
+        {
+          "src": "https://example.com/image31.jpg",
+          "id": "7072"
+        }
+      ],
+      "title": "Studio for Rent in New York",
+      "address": {
+        "street": "Elm St",
+        "postal_code": "62681",
+        "city": "New York",
+        "country": "Canada"
+      },
+      "no_of_bedrooms": 2,
+      "no_of_bathrooms": 2,
+      "sq_foot": 1313,
+      "parking": "Covered",
+      "price": 1340,
+      "property_type": "Condo",
+      "furnished_status": "Semi-furnished",
+      "year_built": 1992,
+      "availability_status": "Available",
+      "lease_terms": "Bi-Annual",
+      "owner": {
+        "name": "Owner 45",
+        "contact": "+1-555-6470"
+      },
+      "nearby_amenities": [
+        "Gym",
+        "School"
+      ],
+      "utilities_included": [
+        "Electricity",
+        "Gas",
+        "Wi-Fi"
+      ],
+      "pet_policy": "No Pets",
+      "security_features": [
+        "CCTV"
+      ],
+      "property_details": "A beautiful property located in a prime area with great amenities.",
+      "what_this_place_offers": [
+        "Air Conditioning",
+        "Parking",
+        "Kitchen",
+        "Laundry"
+      ]
+    },
+    {
+      "images": [
+        {
+          "src": "https://example.com/image55.jpg",
+          "id": "5073"
+        },
+        {
+          "src": "https://example.com/image26.jpg",
+          "id": "9970"
+        },
+        {
+          "src": "https://example.com/image30.jpg",
+          "id": "2194"
+        }
+      ],
+      "title": "House for Rent in New York",
+      "address": {
+        "street": "Elm St",
+        "postal_code": "55668",
+        "city": "Miami",
+        "country": "Canada"
+      },
+      "no_of_bedrooms": 5,
+      "no_of_bathrooms": 2,
+      "sq_foot": 2638,
+      "parking": "No",
+      "price": 575,
+      "property_type": "Townhouse",
+      "furnished_status": "Furnished",
+      "year_built": 1999,
+      "availability_status": "Rented",
+      "lease_terms": "Yearly",
+      "owner": {
+        "name": "Owner 12",
+        "contact": "+1-555-9632"
+      },
+      "nearby_amenities": [
+        "Public Transport"
+      ],
+      "utilities_included": [
+        "Garbage Collection",
+        "Water"
+      ],
+      "pet_policy": "Small Pets Only",
+      "security_features": [
+        "Smart Locks"
+      ],
+      "property_details": "A beautiful property located in a prime area with great amenities.",
+      "what_this_place_offers": [
+        "Air Conditioning",
+        "Laundry"
+      ]
+    },
+    {
+      "images": [
+        {
+          "src": "https://example.com/image47.jpg",
+          "id": "1565"
+        },
+        {
+          "src": "https://example.com/image22.jpg",
+          "id": "9163"
+        },
+        {
+          "src": "https://example.com/image36.jpg",
+          "id": "3978"
+        }
+      ],
+      "title": "Apartment for Rent in Chicago",
+      "address": {
+        "street": "Maple St",
+        "postal_code": "44684",
+        "city": "Los Angeles",
+        "country": "UK"
+      },
+      "no_of_bedrooms": 1,
+      "no_of_bathrooms": 2,
+      "sq_foot": 854,
+      "parking": "Street",
+      "price": 2630,
+      "property_type": "Condo",
+      "furnished_status": "Unfurnished",
+      "year_built": 1986,
+      "availability_status": "Under Maintenance",
+      "lease_terms": "Yearly",
+      "owner": {
+        "name": "Owner 31",
+        "contact": "+1-555-2891"
+      },
+      "nearby_amenities": [
+        "Gym",
+        "Hospital",
+        "Supermarket"
+      ],
+      "utilities_included": [
+        "Garbage Collection",
+        "Wi-Fi"
+      ],
+      "pet_policy": "Small Pets Only",
+      "security_features": [
+        "24/7 Security"
+      ],
+      "property_details": "A beautiful property located in a prime area with great amenities.",
+      "what_this_place_offers": [
+        "Balcony",
+        "Parking"
+      ]
+    },
+    {
+      "images": [
+        {
+          "src": "https://example.com/image89.jpg",
+          "id": "2128"
+        },
+        {
+          "src": "https://example.com/image34.jpg",
+          "id": "4987"
+        },
+        {
+          "src": "https://example.com/image96.jpg",
+          "id": "8993"
+        }
+      ],
+      "title": "Townhouse for Rent in Houston",
+      "address": {
+        "street": "5th Ave",
+        "postal_code": "83924",
+        "city": "New York",
+        "country": "USA"
+      },
+      "no_of_bedrooms": 3,
+      "no_of_bathrooms": 2,
+      "sq_foot": 1714,
+      "parking": "Yes",
+      "price": 3776,
+      "property_type": "Apartment",
+      "furnished_status": "Semi-furnished",
+      "year_built": 1986,
+      "availability_status": "Available",
+      "lease_terms": "Monthly",
+      "owner": {
+        "name": "Owner 6",
+        "contact": "+1-555-2942"
+      },
+      "nearby_amenities": [
+        "Hospital",
+        "School"
+      ],
+      "utilities_included": [
+        "Water",
+        "Wi-Fi",
+        "Electricity"
+      ],
+      "pet_policy": "Pets Allowed",
+      "security_features": [
+        "Gated Community",
+        "Smart Locks"
+      ],
+      "property_details": "A beautiful property located in a prime area with great amenities.",
+      "what_this_place_offers": [
+        "Laundry",
+        "Wi-Fi",
+        "Parking"
+      ]
+    },
+    {
+      "images": [
+        {
+          "src": "https://example.com/image11.jpg",
+          "id": "7603"
+        },
+        {
+          "src": "https://example.com/image8.jpg",
+          "id": "1256"
+        },
+        {
+          "src": "https://example.com/image97.jpg",
+          "id": "4777"
+        }
+      ],
+      "title": "Studio for Rent in Chicago",
+      "address": {
+        "street": "Maple St",
+        "postal_code": "87678",
+        "city": "Los Angeles",
+        "country": "Australia"
+      },
+      "no_of_bedrooms": 5,
+      "no_of_bathrooms": 2,
+      "sq_foot": 2402,
+      "parking": "Covered",
+      "price": 2402,
+      "property_type": "Studio",
+      "furnished_status": "Semi-furnished",
+      "year_built": 2006,
+      "availability_status": "Rented",
+      "lease_terms": "Monthly",
+      "owner": {
+        "name": "Owner 35",
+        "contact": "+1-555-9582"
+      },
+      "nearby_amenities": [
+        "Gym"
+      ],
+      "utilities_included": [
+        "Garbage Collection",
+        "Electricity"
+      ],
+      "pet_policy": "No Pets",
+      "security_features": [
+        "CCTV"
+      ],
+      "property_details": "A beautiful property located in a prime area with great amenities.",
+      "what_this_place_offers": [
+        "Air Conditioning",
+        "Kitchen",
+        "Wi-Fi",
+        "Laundry"
+      ]
+    },
+    {
+      "images": [
+        {
+          "src": "https://example.com/image62.jpg",
+          "id": "5392"
+        },
+        {
+          "src": "https://example.com/image41.jpg",
+          "id": "8516"
+        },
+        {
+          "src": "https://example.com/image28.jpg",
+          "id": "4111"
+        }
+      ],
+      "title": "Townhouse for Rent in Chicago",
+      "address": {
+        "street": "Main St",
+        "postal_code": "26355",
+        "city": "Chicago",
+        "country": "UK"
+      },
+      "no_of_bedrooms": 4,
+      "no_of_bathrooms": 2,
+      "sq_foot": 2386,
+      "parking": "Covered",
+      "price": 4232,
+      "property_type": "House",
+      "furnished_status": "Furnished",
+      "year_built": 2021,
+      "availability_status": "Rented",
+      "lease_terms": "Bi-Annual",
+      "owner": {
+        "name": "Owner 38",
+        "contact": "+1-555-1032"
+      },
+      "nearby_amenities": [
+        "School"
+      ],
+      "utilities_included": [
+        "Water",
+        "Garbage Collection"
+      ],
+      "pet_policy": "No Pets",
+      "security_features": [
+        "24/7 Security",
+        "Smart Locks"
+      ],
+      "property_details": "A beautiful property located in a prime area with great amenities.",
+      "what_this_place_offers": [
+        "Wi-Fi",
+        "Air Conditioning",
+        "Parking",
+        "Laundry"
+      ]
+    },
+    {
+      "images": [
+        {
+          "src": "https://example.com/image32.jpg",
+          "id": "6446"
+        },
+        {
+          "src": "https://example.com/image97.jpg",
+          "id": "3684"
+        },
+        {
+          "src": "https://example.com/image78.jpg",
+          "id": "7941"
+        }
+      ],
+      "title": "Townhouse for Rent in New York",
+      "address": {
+        "street": "Main St",
+        "postal_code": "55777",
+        "city": "New York",
+        "country": "Germany"
+      },
+      "no_of_bedrooms": 2,
+      "no_of_bathrooms": 3,
+      "sq_foot": 2700,
+      "parking": "Yes",
+      "price": 2942,
+      "property_type": "Condo",
+      "furnished_status": "Semi-furnished",
+      "year_built": 1990,
+      "availability_status": "Rented",
+      "lease_terms": "Yearly",
+      "owner": {
+        "name": "Owner 27",
+        "contact": "+1-555-1693"
+      },
+      "nearby_amenities": [
+        "Gym",
+        "Hospital"
+      ],
+      "utilities_included": [
+        "Water",
+        "Wi-Fi",
+        "Garbage Collection"
+      ],
+      "pet_policy": "No Pets",
+      "security_features": [
+        "24/7 Security",
+        "Smart Locks"
+      ],
+      "property_details": "A beautiful property located in a prime area with great amenities.",
+      "what_this_place_offers": [
+        "Wi-Fi",
+        "Parking",
+        "Balcony"
+      ]
+    },
+    {
+      "images": [
+        {
+          "src": "https://example.com/image1.jpg",
+          "id": "4525"
+        },
+        {
+          "src": "https://example.com/image21.jpg",
+          "id": "5846"
+        },
+        {
+          "src": "https://example.com/image65.jpg",
+          "id": "6832"
+        }
+      ],
+      "title": "Apartment for Rent in Houston",
+      "address": {
+        "street": "5th Ave",
+        "postal_code": "93892",
+        "city": "Chicago",
+        "country": "UK"
+      },
+      "no_of_bedrooms": 3,
+      "no_of_bathrooms": 2,
+      "sq_foot": 3259,
+      "parking": "Yes",
+      "price": 3643,
+      "property_type": "Apartment",
+      "furnished_status": "Unfurnished",
+      "year_built": 1984,
+      "availability_status": "Available",
+      "lease_terms": "Yearly",
+      "owner": {
+        "name": "Owner 47",
+        "contact": "+1-555-4064"
+      },
+      "nearby_amenities": [
+        "Public Transport",
+        "School"
+      ],
+      "utilities_included": [
+        "Wi-Fi"
+      ],
+      "pet_policy": "No Pets",
+      "security_features": [
+        "24/7 Security"
+      ],
+      "property_details": "A beautiful property located in a prime area with great amenities.",
+      "what_this_place_offers": [
+        "Air Conditioning",
+        "Laundry",
+        "Kitchen",
+        "Balcony"
+      ]
+    },
+    {
+      "images": [
+        {
+          "src": "https://example.com/image99.jpg",
+          "id": "6597"
+        },
+        {
+          "src": "https://example.com/image30.jpg",
+          "id": "6011"
+        },
+        {
+          "src": "https://example.com/image10.jpg",
+          "id": "7433"
+        }
+      ],
+      "title": "Townhouse for Rent in Chicago",
+      "address": {
+        "street": "Main St",
+        "postal_code": "24744",
+        "city": "New York",
+        "country": "Canada"
+      },
+      "no_of_bedrooms": 3,
+      "no_of_bathrooms": 2,
+      "sq_foot": 2729,
+      "parking": "No",
+      "price": 3112,
+      "property_type": "Condo",
+      "furnished_status": "Unfurnished",
+      "year_built": 2010,
+      "availability_status": "Under Maintenance",
+      "lease_terms": "Monthly",
+      "owner": {
+        "name": "Owner 49",
+        "contact": "+1-555-4945"
+      },
+      "nearby_amenities": [
+        "Hospital",
+        "Pool"
+      ],
+      "utilities_included": [
+        "Gas",
+        "Water",
+        "Wi-Fi"
+      ],
+      "pet_policy": "Small Pets Only",
+      "security_features": [
+        "24/7 Security",
+        "CCTV"
+      ],
+      "property_details": "A beautiful property located in a prime area with great amenities.",
+      "what_this_place_offers": [
+        "Balcony",
+        "Parking",
+        "Laundry",
+        "Air Conditioning"
+      ]
+    },
+    {
+      "images": [
+        {
+          "src": "https://example.com/image84.jpg",
+          "id": "6094"
+        },
+        {
+          "src": "https://example.com/image61.jpg",
+          "id": "1578"
+        },
+        {
+          "src": "https://example.com/image82.jpg",
+          "id": "4121"
+        }
+      ],
+      "title": "House for Rent in Los Angeles",
+      "address": {
+        "street": "Elm St",
+        "postal_code": "10987",
+        "city": "Chicago",
+        "country": "USA"
+      },
+      "no_of_bedrooms": 1,
+      "no_of_bathrooms": 3,
+      "sq_foot": 1975,
+      "parking": "No",
+      "price": 675,
+      "property_type": "Condo",
+      "furnished_status": "Semi-furnished",
+      "year_built": 1987,
+      "availability_status": "Under Maintenance",
+      "lease_terms": "Bi-Annual",
+      "owner": {
+        "name": "Owner 27",
+        "contact": "+1-555-7648"
+      },
+      "nearby_amenities": [
+        "Pool"
+      ],
+      "utilities_included": [
+        "Water",
+        "Garbage Collection",
+        "Wi-Fi"
+      ],
+      "pet_policy": "No Pets",
+      "security_features": [
+        "Smart Locks",
+        "24/7 Security"
+      ],
+      "property_details": "A beautiful property located in a prime area with great amenities.",
+      "what_this_place_offers": [
+        "Laundry",
+        "Air Conditioning"
+      ]
+    },
+    {
+      "images": [
+        {
+          "src": "https://example.com/image70.jpg",
+          "id": "3200"
+        },
+        {
+          "src": "https://example.com/image97.jpg",
+          "id": "2919"
+        },
+        {
+          "src": "https://example.com/image80.jpg",
+          "id": "5201"
+        }
+      ],
+      "title": "House for Rent in Miami",
+      "address": {
+        "street": "Main St",
+        "postal_code": "16686",
+        "city": "Chicago",
+        "country": "USA"
+      },
+      "no_of_bedrooms": 2,
+      "no_of_bathrooms": 1,
+      "sq_foot": 3481,
+      "parking": "Street",
+      "price": 742,
+      "property_type": "House",
+      "furnished_status": "Furnished",
+      "year_built": 1986,
+      "availability_status": "Rented",
+      "lease_terms": "Yearly",
+      "owner": {
+        "name": "Owner 42",
+        "contact": "+1-555-1624"
+      },
+      "nearby_amenities": [
+        "School",
+        "Hospital",
+        "Public Transport"
+      ],
+      "utilities_included": [
+        "Gas",
+        "Water"
+      ],
+      "pet_policy": "No Pets",
+      "security_features": [
+        "CCTV"
+      ],
+      "property_details": "A beautiful property located in a prime area with great amenities.",
+      "what_this_place_offers": [
+        "Balcony",
+        "Air Conditioning",
+        "Laundry",
+        "Wi-Fi"
+      ]
+    },
+    {
+      "images": [
+        {
+          "src": "https://example.com/image90.jpg",
+          "id": "1834"
+        },
+        {
+          "src": "https://example.com/image64.jpg",
+          "id": "7863"
+        },
+        {
+          "src": "https://example.com/image54.jpg",
+          "id": "6742"
+        }
+      ],
+      "title": "Townhouse for Rent in Los Angeles",
+      "address": {
+        "street": "Main St",
+        "postal_code": "73629",
+        "city": "Los Angeles",
+        "country": "UK"
+      },
+      "no_of_bedrooms": 3,
+      "no_of_bathrooms": 2,
+      "sq_foot": 2429,
+      "parking": "Yes",
+      "price": 4058,
+      "property_type": "Apartment",
+      "furnished_status": "Unfurnished",
+      "year_built": 2013,
+      "availability_status": "Available",
+      "lease_terms": "Monthly",
+      "owner": {
+        "name": "Owner 13",
+        "contact": "+1-555-5484"
+      },
+      "nearby_amenities": [
+        "Hospital",
+        "Public Transport",
+        "Gym"
+      ],
+      "utilities_included": [
+        "Electricity"
+      ],
+      "pet_policy": "Small Pets Only",
+      "security_features": [
+        "Gated Community"
+      ],
+      "property_details": "A beautiful property located in a prime area with great amenities.",
+      "what_this_place_offers": [
+        "Parking",
+        "Air Conditioning"
+      ]
+    },
+    {
+      "images": [
+        {
+          "src": "https://example.com/image30.jpg",
+          "id": "5654"
+        },
+        {
+          "src": "https://example.com/image66.jpg",
+          "id": "5830"
+        },
+        {
+          "src": "https://example.com/image66.jpg",
+          "id": "5922"
+        }
+      ],
+      "title": "Townhouse for Rent in Houston",
+      "address": {
+        "street": "Maple St",
+        "postal_code": "45450",
+        "city": "Chicago",
+        "country": "UK"
+      },
+      "no_of_bedrooms": 2,
+      "no_of_bathrooms": 2,
+      "sq_foot": 572,
+      "parking": "Street",
+      "price": 3470,
+      "property_type": "House",
+      "furnished_status": "Semi-furnished",
+      "year_built": 1997,
+      "availability_status": "Under Maintenance",
+      "lease_terms": "Monthly",
+      "owner": {
+        "name": "Owner 38",
+        "contact": "+1-555-5559"
+      },
+      "nearby_amenities": [
+        "Public Transport",
+        "Gym"
+      ],
+      "utilities_included": [
+        "Gas",
+        "Water"
+      ],
+      "pet_policy": "Small Pets Only",
+      "security_features": [
+        "Gated Community",
+        "24/7 Security"
+      ],
+      "property_details": "A beautiful property located in a prime area with great amenities.",
+      "what_this_place_offers": [
+        "Laundry",
+        "Kitchen",
+        "Balcony",
+        "Parking"
+      ]
+    },
+    {
+      "images": [
+        {
+          "src": "https://example.com/image21.jpg",
+          "id": "1818"
+        },
+        {
+          "src": "https://example.com/image76.jpg",
+          "id": "9248"
+        },
+        {
+          "src": "https://example.com/image73.jpg",
+          "id": "4844"
+        }
+      ],
+      "title": "House for Rent in Houston",
+      "address": {
+        "street": "Main St",
+        "postal_code": "53862",
+        "city": "Los Angeles",
+        "country": "Canada"
+      },
+      "no_of_bedrooms": 5,
+      "no_of_bathrooms": 1,
+      "sq_foot": 2137,
+      "parking": "Yes",
+      "price": 2502,
+      "property_type": "Condo",
+      "furnished_status": "Furnished",
+      "year_built": 2022,
+      "availability_status": "Under Maintenance",
+      "lease_terms": "Monthly",
+      "owner": {
+        "name": "Owner 48",
+        "contact": "+1-555-3471"
+      },
+      "nearby_amenities": [
+        "Pool"
+      ],
+      "utilities_included": [
+        "Electricity"
+      ],
+      "pet_policy": "Small Pets Only",
+      "security_features": [
+        "Smart Locks"
+      ],
+      "property_details": "A beautiful property located in a prime area with great amenities.",
+      "what_this_place_offers": [
+        "Parking",
+        "Laundry"
+      ]
+    },
+    {
+      "images": [
+        {
+          "src": "https://example.com/image64.jpg",
+          "id": "2348"
+        },
+        {
+          "src": "https://example.com/image38.jpg",
+          "id": "5426"
+        },
+        {
+          "src": "https://example.com/image88.jpg",
+          "id": "9381"
+        }
+      ],
+      "title": "Studio for Rent in Miami",
+      "address": {
+        "street": "Elm St",
+        "postal_code": "23841",
+        "city": "Chicago",
+        "country": "Germany"
+      },
+      "no_of_bedrooms": 3,
+      "no_of_bathrooms": 1,
+      "sq_foot": 1963,
+      "parking": "Street",
+      "price": 1829,
+      "property_type": "Studio",
+      "furnished_status": "Unfurnished",
+      "year_built": 2021,
+      "availability_status": "Available",
+      "lease_terms": "Monthly",
+      "owner": {
+        "name": "Owner 20",
+        "contact": "+1-555-4609"
+      },
+      "nearby_amenities": [
+        "Pool",
+        "Hospital"
+      ],
+      "utilities_included": [
+        "Gas",
+        "Wi-Fi",
+        "Garbage Collection"
+      ],
+      "pet_policy": "No Pets",
+      "security_features": [
+        "CCTV",
+        "Smart Locks"
+      ],
+      "property_details": "A beautiful property located in a prime area with great amenities.",
+      "what_this_place_offers": [
+        "Air Conditioning",
+        "Balcony"
+      ]
+    },
+    {
+      "images": [
+        {
+          "src": "https://example.com/image5.jpg",
+          "id": "9323"
+        },
+        {
+          "src": "https://example.com/image40.jpg",
+          "id": "5670"
+        },
+        {
+          "src": "https://example.com/image76.jpg",
+          "id": "7497"
+        }
+      ],
+      "title": "Studio for Rent in Los Angeles",
+      "address": {
+        "street": "Maple St",
+        "postal_code": "22034",
+        "city": "Miami",
+        "country": "Germany"
+      },
+      "no_of_bedrooms": 3,
+      "no_of_bathrooms": 2,
+      "sq_foot": 1782,
+      "parking": "Street",
+      "price": 1162,
+      "property_type": "House",
+      "furnished_status": "Semi-furnished",
+      "year_built": 2011,
+      "availability_status": "Available",
+      "lease_terms": "Monthly",
+      "owner": {
+        "name": "Owner 46",
+        "contact": "+1-555-5729"
+      },
+      "nearby_amenities": [
+        "Public Transport",
+        "Supermarket",
+        "Hospital"
+      ],
+      "utilities_included": [
+        "Water",
+        "Wi-Fi",
+        "Gas"
+      ],
+      "pet_policy": "Small Pets Only",
+      "security_features": [
+        "Smart Locks"
+      ],
+      "property_details": "A beautiful property located in a prime area with great amenities.",
+      "what_this_place_offers": [
+        "Kitchen",
+        "Wi-Fi",
+        "Laundry",
+        "Parking"
+      ]
+    },
+    {
+      "images": [
+        {
+          "src": "https://example.com/image93.jpg",
+          "id": "3396"
+        },
+        {
+          "src": "https://example.com/image81.jpg",
+          "id": "5231"
+        },
+        {
+          "src": "https://example.com/image66.jpg",
+          "id": "3155"
+        }
+      ],
+      "title": "Condo for Rent in Los Angeles",
+      "address": {
+        "street": "5th Ave",
+        "postal_code": "84389",
+        "city": "Miami",
+        "country": "USA"
+      },
+      "no_of_bedrooms": 4,
+      "no_of_bathrooms": 3,
+      "sq_foot": 1556,
+      "parking": "Yes",
+      "price": 573,
+      "property_type": "Townhouse",
+      "furnished_status": "Furnished",
+      "year_built": 2006,
+      "availability_status": "Available",
+      "lease_terms": "Monthly",
+      "owner": {
+        "name": "Owner 29",
+        "contact": "+1-555-5371"
+      },
+      "nearby_amenities": [
+        "Public Transport"
+      ],
+      "utilities_included": [
+        "Gas"
+      ],
+      "pet_policy": "No Pets",
+      "security_features": [
+        "CCTV",
+        "24/7 Security"
+      ],
+      "property_details": "A beautiful property located in a prime area with great amenities.",
+      "what_this_place_offers": [
+        "Laundry",
+        "Air Conditioning"
+      ]
+    },
+    {
+      "images": [
+        {
+          "src": "https://example.com/image40.jpg",
+          "id": "3942"
+        },
+        {
+          "src": "https://example.com/image56.jpg",
+          "id": "6465"
+        },
+        {
+          "src": "https://example.com/image89.jpg",
+          "id": "4102"
+        }
+      ],
+      "title": "Apartment for Rent in Los Angeles",
+      "address": {
+        "street": "Broadway Ave",
+        "postal_code": "56855",
+        "city": "Los Angeles",
+        "country": "Canada"
+      },
+      "no_of_bedrooms": 2,
+      "no_of_bathrooms": 3,
+      "sq_foot": 3159,
+      "parking": "Street",
+      "price": 4110,
+      "property_type": "Apartment",
+      "furnished_status": "Unfurnished",
+      "year_built": 2022,
+      "availability_status": "Available",
+      "lease_terms": "Yearly",
+      "owner": {
+        "name": "Owner 22",
+        "contact": "+1-555-9870"
+      },
+      "nearby_amenities": [
+        "Hospital",
+        "Gym",
+        "Public Transport"
+      ],
+      "utilities_included": [
+        "Water",
+        "Gas",
+        "Wi-Fi"
+      ],
+      "pet_policy": "Small Pets Only",
+      "security_features": [
+        "Smart Locks",
+        "24/7 Security"
+      ],
+      "property_details": "A beautiful property located in a prime area with great amenities.",
+      "what_this_place_offers": [
+        "Parking",
+        "Wi-Fi",
+        "Laundry"
+      ]
+    },
+    {
+      "images": [
+        {
+          "src": "https://example.com/image76.jpg",
+          "id": "5142"
+        },
+        {
+          "src": "https://example.com/image86.jpg",
+          "id": "4791"
+        },
+        {
+          "src": "https://example.com/image46.jpg",
+          "id": "6725"
+        }
+      ],
+      "title": "House for Rent in Houston",
+      "address": {
+        "street": "Maple St",
+        "postal_code": "50810",
+        "city": "Miami",
+        "country": "Canada"
+      },
+      "no_of_bedrooms": 5,
+      "no_of_bathrooms": 3,
+      "sq_foot": 2359,
+      "parking": "Covered",
+      "price": 2697,
+      "property_type": "Condo",
+      "furnished_status": "Semi-furnished",
+      "year_built": 2006,
+      "availability_status": "Available",
+      "lease_terms": "Monthly",
+      "owner": {
+        "name": "Owner 32",
+        "contact": "+1-555-5594"
+      },
+      "nearby_amenities": [
+        "Supermarket",
+        "Hospital"
+      ],
+      "utilities_included": [
+        "Garbage Collection",
+        "Wi-Fi",
+        "Water"
+      ],
+      "pet_policy": "Pets Allowed",
+      "security_features": [
+        "Gated Community"
+      ],
+      "property_details": "A beautiful property located in a prime area with great amenities.",
+      "what_this_place_offers": [
+        "Balcony",
+        "Kitchen"
+      ]
+    }
+  ]
