@@ -14,7 +14,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           <Header />
         </section>
 
-        <div className="px-4">{children}</div>
+        <div className="px-4 bg-black/5 min-h-screen">{children}</div>
       </section>
     </section>
   );
