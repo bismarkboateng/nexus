@@ -3,7 +3,7 @@ const initialPropertyValues = {
     title: "",
     property_type: "",
     furnished_status: "",
-    year_built: 0,
+    year_built: "",
     property_details: "",
 
     // address
@@ -15,13 +15,13 @@ const initialPropertyValues = {
     },
 
     // specifications
-    no_of_bedrooms: 0,
-    no_of_bathrooms: 0,
-    sq_foot: 0,
+    no_of_bedrooms: "",
+    no_of_bathrooms: "",
+    sq_foot: "",
     parking: "",
 
     // pricing and availability
-    price: 0,
+    price: "",
     availability_status: "",
     lease_terms: "",
 
@@ -32,10 +32,10 @@ const initialPropertyValues = {
     },
 
     // amenities and features
-    nearby_amenities: [],
-    utilities_included: [],
-    security_features: [], 
-    what_this_place_offers:  [],
+    nearby_amenities: "",
+    utilities_included: "",
+    security_features: "", 
+    what_this_place_offers:  "",
 
     // policies
     pet_policy: "",
