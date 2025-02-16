@@ -28,9 +28,7 @@ export default function SignInForm() {
   });
 
   async function onSubmit(values: z.infer<typeof signInFormSchema>) {
-    console.log(values);
     await handleSignin(values.email, values.password)
-
   }
 
   return (
