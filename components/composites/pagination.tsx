@@ -1,6 +1,10 @@
 "use client";
 
-import { Pagination, PaginationContent, PaginationItem } from "@/components/ui/pagination";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+} from "@/components/ui/pagination";
 import { Dispatch, SetStateAction } from "react";
 
 export default function PaginationComponent({
@@ -28,9 +32,11 @@ export default function PaginationComponent({
             <PaginationItem
               key={`${page}-${index}`}
               onClick={() => setCurrentPage(page)}
-              className={`pt-1 px-3 rounded-md cursor-pointer ${
-                page == currentPage ? "bg-blue-500 text-white" : "bg-gray-500"
-              }`}
+              className={`
+                pt-1 px-3 rounded-md cursor-pointer text-sm
+                flex items-center justify-center ${
+                  page == currentPage ? "bg-blue-500 text-white" : "bg-gray-300"
+                }`}
             >
               {page}
             </PaginationItem>
