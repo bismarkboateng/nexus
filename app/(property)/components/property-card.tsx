@@ -1,18 +1,17 @@
 import Text from "@/components/ui/text";
 import { Dot, Heart, Maximize2 } from "lucide-react";
 import Image from "next/image";
+import { PropertyType } from "../types";
 
-export default function PropertyCard() {
-  const property = {
-    title: "Sunset Paradise",
-    description: "Entire apartment in Center",
-    price: "$75, 000.00",
-    size: "240m",
-    rooms: { bedroom: "1", guests: "2", bath: "1" },
-  };
+import Link from "next/link";
 
+type Props = {
+  property: PropertyType
+}
+
+export default function PropertyCard({ property }: Props) {
   return (
-    <section
+    <Link href="#"
       className="col-span-2 flex flex-row gap-2 border rounded-lg p-2
     cursor-pointer shadow"
     >
@@ -25,23 +24,22 @@ export default function PropertyCard() {
       />
       <div className="w-full flex flex-col gap-1">
         <div className="flex flex-row items-center justify-between">
-          <Text className="text-xs text-gray-500 ">{property.description}</Text>
+          <Text className="text-xs text-gray-500 ">{property.property_details}</Text>
           <Heart className="text-red-500" size={15} />
         </div>
         <Text className="font-medium">{property.title}</Text>
         <div className="text-xs flex flex-row items-center text-gray-500">
-          <Text>{property.rooms.bedroom} bedroom</Text> <Dot />
-          <Text>{property.rooms.guests} Guests</Text> <Dot />
-          <Text>{property.rooms.bath} bath</Text>
+          <Text>{property.no_of_bedrooms} bedroom</Text> <Dot />
+          <Text>{property.no_of_bathrooms} bath</Text>
         </div>
         <div className="flex flex-row items-center justify-between">
           <div className="flex flex-row items-center gap-1">
             <Maximize2 size={14} className="text-gray-500" />
-            <Text className="text-gray-500 text-sm">{property.size}</Text>
+            <Text className="text-gray-500 text-sm">{property.sq_foot} m²</Text>
           </div>
-          <Text className="text-sm font-bold">{property.price}</Text>
+          <Text className="text-sm font-bold">${property.price.toFixed(2)}</Text>
         </div>
       </div>
-    </section>
+    </Link>
   );
 }

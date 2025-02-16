@@ -4,10 +4,19 @@ import { useBoundStore } from "@/store";
 import PropertyCard from "./property-card";
 import PropertyDetail from "./property-detail";
 import Text from "@/components/ui/text";
+
 import FilterProperty from "./filter-property";
+import { useState } from "react";
+import PaginationComponent from "@/components/composites/pagination";
 
 export default function PropertyWrapper() {
   const properties = useBoundStore((state) => state.property);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(4);
+  const lastPostIndex = currentPage * postsPerPage;
+
+  const firstPostIndex = lastPostIndex - postsPerPage;
+  const currentProperties = properties.slice(firstPostIndex, lastPostIndex);
 
   return (
     <>
@@ -19,9 +28,15 @@ export default function PropertyWrapper() {
           </Text>
           <FilterProperty />
         </div>
-        {properties.map((item) => (
-          <PropertyCard key={item.price} />
+        {currentProperties.map((item) => (
+          <PropertyCard property={item} key={item.price} />
         ))}
+        <PaginationComponent
+         totalPosts={properties.length}
+         postsPerPage={postsPerPage}
+         setCurrentPage={setCurrentPage}
+         currentPage={currentPage}
+        />
       </div>
       <PropertyDetail />
     </>
