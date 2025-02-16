@@ -6,12 +6,19 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 
 import { Button } from "@/components/ui/button";
-import {
-  Form, FormControl, FormMessage,
-  FormField, FormItem, FormLabel,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import initialPropertyValues from "../lib/const";
+import PropertyDetailsFields from "./split-property-forms/property-details-fields";
+
+import PropertyAddressFields from "./split-property-forms/property-address-fields";
+import PropertySpecifications from "./split-property-forms/property-specifications";
+import PropertyPricingAvailability from "./split-property-forms/property-pricing-availability";
+import PropertyOwnerInformation from "./split-property-forms/property-owner-infor";
+
+import PropertyAmenitiesFeatures from "./split-property-forms/property-amenities-features";
+import { Textarea } from "@/components/ui/textarea";
+import FileUploader from "@/components/composites/file-uploader";
+
 
 export default function AddPropertyForm() {
   const form = useForm<z.infer<typeof PropertySchema>>({
@@ -25,20 +32,31 @@ export default function AddPropertyForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3 mt-3">
+        <PropertyDetailsFields form={form} />
+        <PropertyAddressFields form={form} />
+        <PropertySpecifications form={form} />
+        <PropertyPricingAvailability form={form} />
+        <PropertyOwnerInformation form={form} />
+        <PropertyAmenitiesFeatures form={form} />
         <FormField
           control={form.control}
-          name="title"
+          name="pet_policy"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Username</FormLabel>
+              <FormLabel>Pet Policy</FormLabel>
               <FormControl>
-                <Input placeholder="shadcn" {...field} />
+                <Textarea
+                  className="shad-input"
+                  placeholder="Enter utilities"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
+        <FileUploader />
         <Button
           size="sm"
           type="submit"

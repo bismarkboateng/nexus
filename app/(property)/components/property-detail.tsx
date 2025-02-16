@@ -3,17 +3,17 @@
 import { Button } from "@/components/ui/button";
 import Text from "@/components/ui/text";
 import LightHouse from "@/components/widgets/light-house/light-house";
-import LocationIcon from "@/public/assets/icons/location";
-
 import { useBoundStore } from "@/store";
-import { Separator } from "@/components/ui/separator";
-import { BedSingle, Bath, ChartArea, SquareParking } from "lucide-react";
-import PropertyFeature from "./property-feature";
 
+import { Separator } from "@/components/ui/separator";
+import { BedSingle, Bath, ChartArea, SquareParking, Locate } from "lucide-react";
+import PropertyFeature from "./property-feature";
 import { Plus } from "lucide-react";
+
 import Icon from "@/components/ui/icon";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import AddProperty from "./add-property";
+
 
 export default function PropertyDetail() {
   const properties = useBoundStore((state) => state.property);
@@ -39,7 +39,7 @@ export default function PropertyDetail() {
         <div className="flex flex-col gap-1">
           <Text className="font-semibold text-base">{property.title}</Text>
           <div className="flex items-center gap-1 text-sm text-gray-500">
-            <LocationIcon />
+            <Locate />
             <Text>{property.address.postal_code}</Text>,
             <Text>{property.address.city}</Text>,
             <Text>{property.address.country}</Text>
