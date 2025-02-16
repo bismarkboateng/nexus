@@ -31,8 +31,6 @@ import { Textarea } from "@/components/ui/textarea";
                   <Input
                     className="shad-input"
                     placeholder="price"
-                    type="number"
-                    min={1}
                     {...field}
                   />
                 </FormControl>

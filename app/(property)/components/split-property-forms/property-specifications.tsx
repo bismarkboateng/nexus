@@ -19,7 +19,7 @@ export default function PropertySpecifications({
   return (
     <section className="flex flex-col gap-3 mt-3">
       <Text className="text-lg text-blue-600">Specifications</Text>   
-      <div className="grid grid-cols-3 space-x-3">
+      <div className="grid grid-cols-4 space-x-3">
         <FormField
           control={form.control}
           name="no_of_bedrooms"
@@ -30,8 +30,6 @@ export default function PropertySpecifications({
                 <Input
                   className="shad-input"
                   placeholder="Bedrooms"
-                  type="number"
-                  min={1}
                   {...field}
                 />
               </FormControl>
@@ -49,8 +47,7 @@ export default function PropertySpecifications({
                 <Input
                   className="shad-input"
                   placeholder="Bathrooms"
-                  type="number"
-                  min={1}
+
                   {...field}
                 />
               </FormControl>
@@ -68,8 +65,23 @@ export default function PropertySpecifications({
                 <Input
                   className="shad-input"
                   placeholder="Enter area"
-                  type="number"
-                  min={1}
+                  {...field}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="parking"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Parking</FormLabel>
+              <FormControl>
+                <Input
+                  className="shad-input"
+                  placeholder="Enter parking info"
                   {...field}
                 />
               </FormControl>
