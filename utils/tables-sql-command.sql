@@ -36,6 +36,7 @@ create table userinfo (
   id bigint generated always as identity primary key,
   email text,
   name text,
+  role text,
   user_id uuid references "auth"."users"
 );
 

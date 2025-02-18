@@ -95,7 +95,7 @@ export default function SignInForm() {
                <Loader className="w-4 h-4 animate-spin text-white" />
               </>
              ): (
-              <>Create account</>
+              <>Sign in</>
              )}
           </Button>
           <Link className="block mt-1" href="/auth/forgot-password">
