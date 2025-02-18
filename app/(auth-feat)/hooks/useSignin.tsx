@@ -8,15 +8,31 @@ export default function useSignin() {
 
   const handleSignin = async (email: string, password: string) => {
     try {
-      const { data, error } = await supabase.auth.signInWithPassword({
-        email,
-        password,
+      const { data: signIndata, error } =
+        await supabase.auth.signInWithPassword({
+          email,
+          password,
+        });
+
+      console.log("user email", email)
+      const { data, error: fetchingInfoError } = await supabase
+        .from("userinfo")
+        .select("*")
+        .eq("email", email)
+        .single();
+
+      console.log({
+        fetchInfoData: data,
+        fetcInfoError: fetchingInfoError,
+
+        signInData: signIndata,
+        signInError: error,
       });
-      // route, check error states
-      console.log(data, error)
     } catch (err) {
       const errorMessage =
-        err instanceof Error ? err.message : "Signup failed. Please try again.";
+        err instanceof Error
+          ? err.message
+          : "Sign in failed. Please try again.";
       toast.error(errorMessage);
       setLoading("error");
     }
