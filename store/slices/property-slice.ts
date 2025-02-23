@@ -1,6 +1,6 @@
 import { create } from "zustand"
 import { PropertyStoreType } from "../types/property-types"
-import Properties from "@/db/index.json"
+import Properties from "@/lib/index.json"
 
 
 export const usePropertySlice = create<PropertyStoreType>(() => ({

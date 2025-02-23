@@ -16,6 +16,6 @@ export const forgotPasswordSchema = z.object({
 })
 
 export const saveNewPasswordSchema = z.object({
-  password: z.string(),
-  confirm_password: z.string(),
+  password: z.string().min(6).max(200),
+  confirm_password: z.string().min(6).max(200),
 })

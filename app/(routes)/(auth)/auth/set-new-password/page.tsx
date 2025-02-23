@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
 
 import { Input } from "@/components/ui/input";
+import Text from "@/components/ui/text";
 
 
 export default function SetNewPassword() {
@@ -22,23 +23,27 @@ export default function SetNewPassword() {
     },
   });
 
-  // 2. Define a submit handler.
+
   function onSubmit(values: z.infer<typeof saveNewPasswordSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
+
     console.log(values);
   }
 
   return (
     <section className="relative bg-light-gray min-h-screen w-full flex items-center justify-center">
-      <section className="bg-white p-5 w-1/3 mx-auto rounded-md shadow-md">
+      <section className="bg-white w-[90%] md:w-[50%] lg:w-[35%] p-5 xl:md:w-[25%]
+      2xl:w-[20%] mx-auto rounded-md shadow-md">
         <Logo />
         <Headline
           variant="h4"
           className="text-center font-medium text-2xl mb-2"
         >
-         Change password
+         Create new password
         </Headline>
+        <Text className="text-xs text-gray-500 text-center">
+          Your new password must be different from previous
+          used passwords.
+        </Text>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2">
             <FormField
@@ -47,7 +52,7 @@ export default function SetNewPassword() {
               render={({ field }) => (
                 <FormItem className="mt-3">
                   <FormControl>
-                    <Input required type="password" className="shad-input" placeholder="Enter new password" {...field} />
+                    <Input required type="password" className="shad-input" placeholder="Password" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -59,12 +64,15 @@ export default function SetNewPassword() {
               render={({ field }) => (
                 <FormItem className="mt-3">
                   <FormControl>
-                    <Input required type="password" className="shad-input" placeholder="Confirm new password" {...field} />
+                    <Input required type="password" className="shad-input" placeholder="Confirm" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
+            <Text className="text-xs text-gray-500">
+             Both passwords must match 
+            </Text>
             <Button
             className="w-full bg-blue-color hover:bg-blue-color active:bg-blue-color"
             type="submit"

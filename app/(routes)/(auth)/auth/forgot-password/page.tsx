@@ -41,15 +41,16 @@ export default function ForgotPassword() {
 
   return (
     <section className="relative bg-light-gray min-h-screen w-full flex items-center justify-center">
-      <section className="bg-white p-5 w-1/3 mx-auto rounded-md shadow-md">
+      <section className="bg-white w-[90%] md:w-[50%] lg:w-[35%] p-5 xl:md:w-[25%]
+      2xl:w-[20%] mx-auto rounded-md shadow-md">
         <Logo />
         <Headline
           variant="h4"
           className="text-center font-medium text-2xl mb-2"
         >
-          Password Reset
+          Reset Your Password
         </Headline>
-        <Text variant="div" className="text-sm text-text-gray mb-6">
+        <Text variant="div" className="text-xs text-center text-text-gray mb-6">
           Enter your <strong>email address</strong> that you used to register.
           We&apos;ll send you an email with a link to reset your password.
         </Text>
