@@ -1,9 +1,8 @@
 
-
-export default function Home() {
+export default function page() {
   return (
-    <main>
+    <section>
       Home page
-    </main>
+    </section>
   )
 }

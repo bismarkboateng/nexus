@@ -1,6 +1,8 @@
 import { create } from "zustand";
-import { usePropertySlice } from "./slices/property-slice";
+import { useAuthSlice, usePropertySlice, useUserSlice } from "./slices";
 
 export const useBoundStore = create(() => ({
-  ...usePropertySlice.getState()
+  ...useAuthSlice.getState(),
+  ...usePropertySlice.getState(),
+  ...useUserSlice.getState()
 }));

@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -14,10 +14,14 @@ import {
 import { Bell } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Text from "../ui/text";
+import { useBoundStore } from "@/store";
+import { UserInfo } from "@/store/types/user-types"
 
 function Header() {
   const pathname = usePathname();
   const paths = pathname.split("/").filter(Boolean);
+  const user = useBoundStore((state) => state.user);
+  const [userData, setUserData] = useState<null | UserInfo>(null)
 
   return (
     <nav className="flex items-center py-2 px-4 justify-between w-full border-b border-gray-400">
@@ -67,7 +71,7 @@ function Header() {
           </Avatar>
 
           <div>
-            <Text variant="h3" className="font-semibold text-gray-600 text-md">
+            <Text variant="div" className="font-semibold text-gray-600 text-md">
               James Osei
             </Text>
             <Text className="text-xs text-gray-500">Frontend Developer</Text>

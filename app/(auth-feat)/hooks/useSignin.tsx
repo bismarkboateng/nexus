@@ -1,33 +1,32 @@
-import { useState } from "react";
 import { LoadingState } from "../types";
-import { supabase } from "@/services/supabase-config";
 import { toast } from "sonner";
+import { signInUser } from "../services";
+
+import { fetchUserInfo } from "@/app/(user-feat)/services";
+import { useBoundStore } from "@/store";
+import { useRouter } from "next/navigation";
+import { UserInfo } from "@/store/types/user-types";
+import { useState } from "react";
 
 export default function useSignin() {
   const [loading, setLoading] = useState<LoadingState>("idle");
+  const setLoggedIn = useBoundStore((state) => state.setLoggedIn)
+  const setUser = useBoundStore((state) => state.setUser)
+  const router = useRouter()
 
   const handleSignin = async (email: string, password: string) => {
     try {
-      const { data: signIndata, error } =
-        await supabase.auth.signInWithPassword({
-          email,
-          password,
-        });
+      
+      setLoading("loading")
+      await signInUser(email, password)
+      const userInfo = await fetchUserInfo(email)
+      setLoggedIn(true)
 
-      console.log("user email", email)
-      const { data, error: fetchingInfoError } = await supabase
-        .from("userinfo")
-        .select("*")
-        .eq("email", email)
-        .single();
-
-      console.log({
-        fetchInfoData: data,
-        fetcInfoError: fetchingInfoError,
-
-        signInData: signIndata,
-        signInError: error,
-      });
+      const user: UserInfo = userInfo[0]
+      setUser(user)
+      toast.success("logged in")
+      setLoading("done")
+      router.push("/")
     } catch (err) {
       const errorMessage =
         err instanceof Error
