@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { forgotPasswordSchema } from "@/app/(auth-feat)/schema";
 import Headline from "@/components/ui/headline";
@@ -10,10 +10,19 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 
-import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
+import {
+  Form, FormControl, FormField,
+  FormItem, FormMessage,
+} from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import useResetPassword from "@/app/(auth-feat)/hooks/useResetPassword";
+import { Loader } from "lucide-react";
+import { toast } from "sonner";
+
+const DOMAIN = process.env.NEXT_PUBLIC_DOMAIN!;
 
 export default function ForgotPassword() {
+  const { loading, errorMessage, handleResetPassword } = useResetPassword();
   const form = useForm<z.infer<typeof forgotPasswordSchema>>({
     resolver: zodResolver(forgotPasswordSchema),
     defaultValues: {
@@ -21,11 +30,13 @@ export default function ForgotPassword() {
     },
   });
 
-  // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof forgotPasswordSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
+  if (errorMessage) {
+    toast.error(`${errorMessage}`)
+  }
+
+  async function onSubmit(values: z.infer<typeof forgotPasswordSchema>) {
+    const res = await handleResetPassword(values.email, DOMAIN);
+    console.log(res)
   }
 
   return (
@@ -39,8 +50,8 @@ export default function ForgotPassword() {
           Password Reset
         </Headline>
         <Text variant="div" className="text-sm text-text-gray mb-6">
-          Enter your <strong>email address</strong> that you used to register. We&apos;ll send
-          you an email with a link to reset your password.
+          Enter your <strong>email address</strong> that you used to register.
+          We&apos;ll send you an email with a link to reset your password.
         </Text>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2">
@@ -50,18 +61,31 @@ export default function ForgotPassword() {
               render={({ field }) => (
                 <FormItem className="mt-3">
                   <FormControl>
-                    <Input required className="shad-input" placeholder="Enter your email" {...field} />
+                    <Input
+                      required
+                      className="shad-input"
+                      placeholder="Enter your email"
+                      {...field}
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
             <Button
-            className="w-full bg-blue-color hover:bg-blue-color active:bg-blue-color"
-            type="submit"
-          >
-            Reset password
-          </Button>
+              className="w-full bg-blue-color hover:bg-blue-color active:bg-blue-color
+              disabled:bg-blue-400"
+              type="submit"
+              disabled={loading === "loading"}
+            >
+              {loading === "loading" ? (
+                <>
+                  <Loader className="w-4 h-4 animate-spin text-white" />
+                </>
+              ) : (
+                <>Send Reset Email</>
+              )}
+            </Button>
           </form>
         </Form>
       </section>

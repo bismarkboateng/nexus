@@ -9,3 +9,15 @@ export const signInUser = async (email: string, password: string) => {
   if (error) throw new Error(error.message);
   return data;
 };
+
+export const resetPassword = async (email: string, redirectUrl: string) => {
+  const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
+    redirectTo: `${redirectUrl}/auth/set-new-password`,
+  });
+
+  if (error) {
+    return { error };
+  }
+
+  return { data };
+};
